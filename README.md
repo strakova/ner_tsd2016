@@ -15,3 +15,20 @@ In order to run the pipeline, you have to:
  1. Compute the word embeddings using the scripts in `word-embeddings/` directory. In addition to downloading the data, you will need Czech and English POS tagger and lemmatizer models [czech-morfflex-pdt-131112](http://hdl.handle.net/11858/00-097C-0000-0023-68D8-1) and [english-morphium-wsj-140407](http://hdl.handle.net/11858/00-097C-0000-0023-68D9-0).
  2. You need to preprocess the NER corpus you wish to use using the `utils/make_data.sh` script. This script also need the above POS tagger and lemmatizer models. Note that the script uses hardcoded paths to the models.
  3. In order to start the training, run `src/train_all.sh`. By default, the script trains all NER corpora on all configurations, so you should choose only the ones you are interested in. Note that the `src/precompute_data.sh` script use hardcoded paths of word embeddings.
+
+If you find the software useful, please cite the paper:
+```
+@Inbook{Straková2016,
+  author="Strakov{\'a}, Jana and Straka, Milan and Haji{\v{c}}, Jan",
+  editor="Sojka, Petr and Hor{\'a}k, Ale{\v{s}} and Kope{\v{c}}ek, Ivan and Pala, Karel",
+  title="Neural Networks for Featureless Named Entity Recognition in Czech",
+  bookTitle="Text, Speech, and Dialogue: 19th International Conference, TSD 2016, Brno , Czech Republic, September 12-16, 2016, Proceedings",
+  year="2016",
+  publisher="Springer International Publishing",
+  address="Cham",
+  pages="173--181",
+  isbn="978-3-319-45510-5",
+  doi="10.1007/978-3-319-45510-5_20",
+  url="http://dx.doi.org/10.1007/978-3-319-45510-5_20"
+}
+```
