@@ -1,0 +1,10 @@
+Training source code.
+
+The main training script is `train_nn_optim.sh`, which:
+- submits itself using SGE to a cluster
+- precomputes required subset of embeddings to `precomputed_data` directory, if it does not exist
+- precomputes required features to `precomputed_data` directory, if they do not exist
+- run the `train_nn_optim.lua` Torch script to train the network
+- evaluates the results
+
+Multiple experiments can be executed using `train_all.sh`.
