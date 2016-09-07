@@ -18,7 +18,7 @@ In order to run the pipeline, you have to:
 
 If you find the software useful, please cite the paper:
 ```
-@Inbook{Straková2016,
+@Inbook{Strakova2016,
   author="Strakov{\'a}, Jana and Straka, Milan and Haji{\v{c}}, Jan",
   editor="Sojka, Petr and Hor{\'a}k, Ale{\v{s}} and Kope{\v{c}}ek, Ivan and Pala, Karel",
   title="Neural Networks for Featureless Named Entity Recognition in Czech",
