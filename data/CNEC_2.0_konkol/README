@@ -1,0 +1,12 @@
+Konkol's Extended Czech Named Entity Corpus 2.0 in CoNLL-2003 BIO format
+
+The files are copies of Konkol's Extended Czech Named Entity Corpus 2.0
+from http://home.zcu.cz/~konkol/cnec2.0.php:
+
+data/conll/data.train.no-duplicities.conll -> train.conll
+data/conll/data.val.no-duplicities.conll -> dtest.conll
+data/conll/data.test.no-duplicities.conll -> etest.conll
+
+For further processing, it is recommended to re-tag and re-lemmatize.
+E.g., with MorphoDiTa (http://ufal.mff.cuni.cz/morphodita). Script
+  utils/make_data.sh does the job.

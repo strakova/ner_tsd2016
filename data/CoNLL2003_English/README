@@ -1,0 +1,8 @@
+The English NER CoNLL 2013 Corpus
+
+The files from English NER CoNLL 2013 Corpus (which are not here because of
+licensing) should be copied here, with the following names:
+
+eng.testa -> dtest.conll
+eng.testb -> etest.conll
+eng.train -> train.conll

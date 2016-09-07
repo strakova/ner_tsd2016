@@ -1,0 +1,10 @@
+Czech Named Entity Corpus 1.0 in tmt format
+===========================================
+
+Downloaded from http://ufal.mff.cuni.cz/cnec/.
+
+For NER pipeline, the tmt files must be converted to CoNLL-2003 files with BIO
+format and it is strongly recommended to re-tag and re-lemmatize, e.g., with
+MorphoDiTa (http://ufal.mff.cuni.cz/morphodita).
+
+Script utils/make_data.sh does the job.

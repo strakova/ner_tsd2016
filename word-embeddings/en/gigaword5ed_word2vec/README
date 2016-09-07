@@ -1,0 +1,31 @@
+Word embeddings for English, created from the English Gigaword Fifth Edition
+https://catalog.ldc.upenn.edu/LDC2011T07.
+
+The corpus was mildly cleared (all tokens with non-ASCII non-letter Unicode
+characters removed) and segmented and tokenized, resulting in dataset with 4.1G tokens.
+
+The embeddings are available for:
+- forms: forms were lowercased before creating the embeddings
+- lemmas: lemmas were created using
+    data/lemmatize/english-morphium-wsj-140407-no_negation.tagger
+    lemmas for unknown forms (no guesser was used) were created
+    by lowercasing the form
+
+The embeddings were created using word2vec, using Skip-gram with negative sampling,
+for tokens with at least 10 occurrences, resulting in:
+- forms: vocabulary forms.vocab.txt of 819127, training corpus with 4497858851 forms
+- lemmas: vocabulary lemmas.vocab.txt of 813199, training corpus with 4497837768 lemmas
+
+Several variants of embeddings were created:
+- w: window 5 and 10
+- d: dimension 50, 100, 150, 200 and 300
+- ns: negative sampling 5
+If unsure, use w 5 and ns 5.
+
+The embeddings are sorted from the most frequent, so you can use head -n 500001
+to obtain embeddings for most frequent 500000 forms/lemmas.
+
+If you have any questions, just ask straka@ufal.mff.cuni.cz.
+
+Authors:
+- Milan Straka

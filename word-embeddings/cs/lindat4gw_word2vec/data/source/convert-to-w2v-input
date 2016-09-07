@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+# script for converting Czech data from LINDAT repo (written only) to 
+#   what word2vec expects to get as input, i.e. sentence per line
+#
+# Data must be downloaded in current dir from LINDAT for this srcipt to work
+# NB: all datasets are very large; see countall script for counting 
+#     their original sizes (total approx. 5 billion words)
+# NB: as all the datasets (except ces.txt) are very large, the script
+#     intentionally does not use make or recompute everything etc. - 
+#     it rather ueses (double) shell comments to comment out execution
+#     of things already done, in order not to indvertently replace and
+#     recompute everything
+#
+# Datasets used:
+# ces.txt.gz from http://hdl.handle.net/11858/00-097C-0000-0022-6133-9
+# czes.xdedupl.onioned.vert.bz2 from
+# plain.articles_shuffled.txt.gz from 
+# syn2005.gz from 
+# syn2006pub.gz from
+# syn2009pub.gz from
+# syn2010.gz from
+# syn2013pub.gz from ...
+#
+# NB: do not repeat the gunizp/bunzip2 commands once it is unzipped
+
+# ces.txt
+# retokenize:
+##echo Working on ces.txt
+##gunzip ces.txt.gz
+##./csts2w2v ces.txt
+
+# czes.xdedupl.onioned.vert
+# get rid of SGML/XML, put sentence per line:
+##echo Working on czes.xdedupl.onioned.vert
+##bunzip2 czes.xdedupl.onioned.vert.bz2
+##sed 's/<s>/@/' czes.xdedupl.onioned.vert |\
+##grep -v '^[<]' |\
+##tr '\n@' ' \n' |\
+##sed 's/^[ ]*//' > czes.xdedupl.onioned.vert.w2v.in
+
+# plain.articles_shuffled.txt
+# convert <s> to newline, all newlines to space
+##echo Working on plain.articles_shuffled.txt
+##bunzip2 plain.articles_shuffled.txt.bz2
+##sed 's/<s>/@/' plain.articles_shuffled.txt |\
+##tr '\n@' ' \n' |\
+##sed 's/^[ ]*//' > plain.articles_shuffled.txt.w2v.in
+
+# syn2005, syn2006pub, syn2009pub, syn2010, syn2013pub
+##for sf in syn2005 syn2006pub syn2009pub syn2010 syn2013pub
+##do
+##  gunzip ${sf}.gz
+##  echo Working on $sf
+##  sed 's/<s id.*>/@/' ${sf} |\
+##  grep -v '^[<]' |\
+##  cut -f1 |\
+##  tr '\n@' ' \n' |\
+##  sed 's/^[ ]*//' > ${sf}.w2v.in
+##done
+
+# does word2vec need just one file? If yes, uncomment the following:
+##cat *.w2v.in > czech-v01.w2v
+
+echo "You can now continue with word counting: use ./count-all-in"
+
+echo 'Done. '"date"

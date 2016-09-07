@@ -1,0 +1,40 @@
+Word embeddings for Czech, created from the following corpora:
+
+- Czech part of W2C http://hdl.handle.net/11858/00-097C-0000-0022-6133-9
+- CZES corpus http://hdl.handle.net/11858/00-097C-0000-0001-CCCF-C
+- articles from CWC2011 http://hdl.handle.net/11858/00-097C-0000-0006-B847-6
+- SYN 2005 http://hdl.handle.net/11858/00-097C-0000-0023-119E-8
+- SYN 2006 PUB http://hdl.handle.net/11858/00-097C-0000-0023-1358-3
+- SYN 2009 PUB http://hdl.handle.net/11858/00-097C-0000-0023-1359-1
+- SYN 2010 http://hdl.handle.net/11858/00-097C-0000-0023-119F-6
+- SYN 2013 PUB http://hdl.handle.net/11858/00-097C-0000-0023-3B09-4
+
+The corpora were mildly cleared (all tokens with non-ASCII non-letter Unicode
+characters removed) and W2C tokenized, resulting in dataset with 4.1G tokens.
+
+The embeddings are available for:
+- forms: forms were lowercased before creating the embeddings
+- lemmas: lemmas with full comments (PDT style) were created using
+    data/lemmatize/czech-morfflex-pdt-131112-pos_only.tagger;
+    lemmas for unknown forms (no guesser was used) were created
+    by lowercasing the form
+
+The embeddings were created using word2vec, using Skip-gram with negative sampling,
+for tokens with at least 10 occurrences, resulting in:
+- forms: vocabulary forms.vocab.txt of 1583998, training corpus with 4087063673 forms
+- lemmas: vocabulary lemmas.vocab.txt of 874200, training corpus with 4089887046 lemmas
+
+Several variants of embeddings were created:
+- w: window 5 and 10
+- d: dimension 50, 100, 150, 200 and 300
+- ns: negative sampling 5 and 15
+If unsure, use w 5 and ns 5.
+
+The embeddings are sorted from the most frequent, so you can use head -n 500001
+to obtain embeddings for most frequent 500000 forms/lemmas.
+
+If you have any questions, just ask straka@ufal.mff.cuni.cz.
+
+Authors:
+- Jan Hajič jr.
+- Milan Straka
