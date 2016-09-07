@@ -1,7 +1,7 @@
 ## Software and data accompanying paper Neural Networks for Featureless Named Entity Recognition in Czech
 
 This repository contains the source code and data used in the following paper:
-- Jana Straková, Milan Straka and Jan Hajič: [Neural Networks for Featureless Named Entity Recognition in Czech](http://link.springer.com/content/pdf/10.1007%2F978-3-319-45510-5_20.pdf). In [Proceedings of the 19th International Conference on Text, Speech and Dialogue (TSD 2016)](http://www.springer.com/us/book/9783319455099), Brno, Czech Republic, September 2016.
+- Jana Straková, Milan Straka and Jan Hajič: [Neural Networks for Featureless Named Entity Recognition in Czech](http://link.springer.com/chapter/10.1007/978-3-319-45510-5_20). In [Proceedings of the 19th International Conference on Text, Speech and Dialogue (TSD 2016)](http://www.springer.com/us/book/9783319455099), Brno, Czech Republic, September 2016.
 
 The repository contains:
 - training scripts (Perl pipeline and NN implemented in Lua using Torch)
