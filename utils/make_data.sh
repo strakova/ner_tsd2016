@@ -13,9 +13,9 @@
 
 CORPUS=$1
 
-if [ $CORPUS="cnec1.0" -o $CORPUS="cnec1.1" -o $CORPUS="cnec2.0" -o $CORPUS="cnec2.0_konkol" -o $CORPUS="cnec1.1_konkol" ]; then
+if [ $CORPUS = "cnec1.0" -o $CORPUS = "cnec1.1" -o $CORPUS = "cnec2.0" -o $CORPUS = "cnec2.0_konkol" -o $CORPUS = "cnec1.1_konkol" ]; then
   MODEL=/net/projects/morphodita/models/czech-morfflex-pdt-131112/czech-morfflex-pdt-131112.tagger-best_accuracy
-elif [ $CORPUS="conll2003_en" ]; then
+elif [ $CORPUS = "conll2003_en" ]; then
   MODEL=/net/projects/morphodita/models/english-morphium-wsj-140407/english-morphium-wsj-140407-no_negation.tagger
 else
   echo "Unknown corpus $CORPUS"
@@ -44,7 +44,7 @@ if [ $CORPUS = "cnec1.0" ]; then
     paste -d" " $TMP/cols123.tmp $TMP/cols45.tmp | sed "s/^ $//" > "$DATA_TAGGED/$name.tagged.conll"
     rm -f $TMP/cols123.tmp $TMP/cols45.tmp
   done
-elif [ $CORPUS="cnec1.1" -o $CORPUS="cnec2.0" ]; then
+elif [ $CORPUS = "cnec1.1" -o $CORPUS = "cnec2.0" ]; then
   case $CORPUS in
     cnec1.1) DATA=../data/CNEC_1.1; CNEC_VERSION=1;;
     cnec2.0) DATA=../data/CNEC_2.0; CNEC_VERSION=2;;
