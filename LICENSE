@@ -1,0 +1,33 @@
+This project is freely available for non-commercial purposes. The source code
+is distributed under Mozilla Public License 2.0.
+
+Copyright 2016 by Institute of Formal and Applied Linguistics, Faculty of
+Mathematics and Physics, Charles University in Prague, Czech Republic. 
+
+If you use this tool for scientific work, please give credit to us by citing:
+
+Straková Jana, Straka Milan, Hajič Jan: Neural Networks for Featureless Named
+Entity Recognition in Czech. In: Lecture Notes in Computer Science, No. 9924,
+Text, Speech, and Dialogue: 19th International Conference, TSD 2016, Copyright
+© Springer International Publishing, Cham / Heidelberg / New York / Dordrecht
+/ London, ISBN 978-3-319-45509-9, ISSN 0302-9743, pp. 173-181, 2016
+
+Bib:
+
+@inproceedings{StStNeuralNetworks2016,
+booktitle = {Text, Speech, and Dialogue: 19th International Conference, {TSD} 2016},
+series = {Lecture Notes in Computer Science},
+title = {Neural Networks for Featureless Named Entity Recognition in Czech},
+editor = {Petr Sojka and Ale{\v{s}} Hor{\'{a}}k and Ivan Kope{\v{c}}ek and Karel Pala},
+author = {Jana Strakov{\'{a}} and Milan Straka and Jan Haji{\v{c}}},
+year = {2016},
+publisher = {Springer International Publishing},
+organization = {Masaryk University},
+address = {Cham / Heidelberg / New York / Dordrecht / London},
+venue = {Hotel Continental},
+series = {Lecture Notes in Artificial Intelligence},
+number = {9924},
+pages = {173--181},
+isbn = {978-3-319-45509-9},
+issn = {0302-9743},
+}
